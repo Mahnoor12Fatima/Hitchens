@@ -59,8 +59,8 @@
     <!-- Pagination Navigation -->
     <div class="pagination-nav mt-10 flex justify-between items-center">
         <!-- Previous Button (left side) -->
-        {{ if $paginator.HasNext }}
-        <a href="{{ $paginator.Next.URL }}" class="text-black font-medium ml-10">&lt; OLDER</a>
+        {{ if $paginator.HasPrev }}
+        <a href="{{ $paginator.Prev.URL }}" class="text-black font-medium ml-10">&lt; OLDER</a>
         {{ end }}
     
         <!-- Centered Page Number -->
@@ -69,8 +69,8 @@
         </div>
     
         <!-- Next Button (right side) -->
-        {{ if $paginator.HasPrev }}
-        <a href="{{ $paginator.Prev.URL }}" class="text-black font-medium mr-10">NEWER &gt;</a>
+        {{ if $paginator.HasNext }}
+        <a href="{{ $paginator.Next.URL }}" class="text-black font-medium mr-10">NEWER &gt;</a>
         {{ end }}
     </div>
 </div>
